@@ -201,7 +201,7 @@ export const commonParseMail = async (raw_mail: string | undefined | null): Prom
         };
     } catch (e) {
         console.error("Failed use mail-parser-wasm-worker to parse email", e);
-    // }
+    }
     try {
         const { default: PostalMime } = await import('postal-mime');
         const parsedEmail = await PostalMime.parse(raw_mail);
